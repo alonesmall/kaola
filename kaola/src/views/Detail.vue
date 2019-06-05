@@ -152,7 +152,7 @@
       </div>
 
       <!-- 该店展示商品 -->
-      <div class="listwrap">
+      <div class="listwrap" v-if="shopGoodsList">
         <ul>
           <li v-for="shopItem in shopGoodsList" :key="shopItem.goodsId">
             <a>
@@ -170,11 +170,19 @@
 
     <p class="v-seperate"></p>
 
+    <Tuijian />
+    <Footer />
   </div>
 </template>
 <script>
 import axios from 'axios'
+import Tuijian from '@/components/detail/Tuijian'
+import Footer from '@/components/detail/Footer'
 export default {
+  components: {
+    Tuijian,
+    Footer
+  },
   data () {
     return {
       bannerList: [],
@@ -473,7 +481,7 @@ export default {
     }
   }
   .shopStore {
-    height: 2.3rem;
+    overflow: hidden;
     .n-brandboxBrand {
       .branwrap {
         overflow: hidden;
