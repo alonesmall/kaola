@@ -146,7 +146,7 @@ export default {
       getKindList: 'getKindList'
     }),
     goLogin () {
-      console.log(1)
+      this.$router.push('/login')
     },
     goCart () {
       console.log(this.kindList)

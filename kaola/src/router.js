@@ -21,6 +21,13 @@ export default new Router({
       }
     },
     {
+      path: '/phonelogin',
+      name: 'phonelogin',
+      components: {
+        default: () => import('@/components/login/Phonelogin.vue')
+      }
+    },
+    {
       path: '/detail/:id',
       name: 'detail',
       components: {
